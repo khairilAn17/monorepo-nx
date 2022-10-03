@@ -14,7 +14,13 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@monorepo-react/books/data-access": [
+        "libs/books/data-access/src/index.ts"
+      ],
+      "@monorepo-react/books/ui": ["libs/books/ui/src/index.ts"],
+      "@monorepo-react/ui/ui": ["libs/ui/ui/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

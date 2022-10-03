@@ -1,0 +1,24 @@
+{
+  "name": "ui-ui",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ui/ui/src",
+  "projectType": "library",
+  "tags": ["type:ui", "scope:books"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/ui/ui/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/ui/ui"],
+      "options": {
+        "jestConfig": "libs/ui/ui/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
